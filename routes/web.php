@@ -8,3 +8,5 @@ Route::get('/', [SiteController::class, 'index'])->name('home');
 Route::view('/sobre', 'sobre')->name('sobre');
 
 Route::get('/vaga/{id}', [SiteController::class, 'show'])->name('vaga.show');
+
+Route::post('/vagas/{id}/candidatar', [SiteController::class, 'enviarCurriculo'])->name('vagas.candidatar');
